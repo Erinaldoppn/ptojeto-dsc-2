@@ -23,6 +23,7 @@ class CursoRequest extends FormRequest
     {
         return [
             'nome' => 'required|unique:cursos|min:2|max:60'
+            
         ];
     }
 }
