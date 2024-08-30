@@ -33,7 +33,7 @@ class CursoController extends Controller
      */
     public function store(CursoRequest $request)
     {
-        $dados_formulario = $request->validated();
+        $dados_formulario = $request->validate();
 
         $retorno = Curso::create($dados_formulario);
 
@@ -70,10 +70,10 @@ class CursoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(CursoRequest $request, string $id)
     {
       
-        $dados_formulario = $request->all();
+        $dados_formulario = $request->validated();
         $registro_recuperado = Curso::find($id);
 
         if($registro_recuperado){

@@ -3,25 +3,17 @@
 @section('title', 'Cadastro de Curso')
 
 @section('content_header')
-    <h1>Cadastro de Curso</h1>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Cursos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Novo</li>
+        </ol>
+    </nav>
 @stop
 
 @section('content')
     <form action="{{route('curso.salvar')}}" method="post">
-        @csrf
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif  
-
-        <label for="nome">Nome</label>
-        <input type="text" name="nome" id="nome" value="{{old('nome')}}" required autofocus maxlength="60">
-        <button>Salvar</button>
+    @include('curso-comum')
     </form>
 @stop
 

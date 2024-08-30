@@ -3,16 +3,18 @@
 @section('title', 'Cadastro de Curso')
 
 @section('content_header')
-    <h1>Cadastro de Curso</h1>
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Cursos</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Novo</li>
+        </ol>
+    </nav>
 @stop
 
 @section('content')
     <form action="{{route('curso.atualizar', ['id' => $objeto->id])}}" method="post">
         @method('PUT')
-        @csrf
-        <label for="nome">Nome</label>
-        <input type="text" name="nome" id="nome" value="{{ $objeto->nome }}" required autofocus>
-        <button>Salvar</button>
+        @include('curso-comum')
     </form>
 @stop
 
