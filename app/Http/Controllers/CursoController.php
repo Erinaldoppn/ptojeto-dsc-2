@@ -33,7 +33,7 @@ class CursoController extends Controller
      */
     public function store(CursoRequest $request)
     {
-        $dados_formulario = $request->validate();
+        $dados_formulario = $request->validated();
 
         $retorno = Curso::create($dados_formulario);
 
