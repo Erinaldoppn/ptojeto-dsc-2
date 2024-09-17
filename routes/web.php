@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CursoController;
+use App\Http\Controllers\AlunoController;
 
 Route::redirect('/', '/login');
 
@@ -30,6 +31,32 @@ Route::middleware('auth')->group(function(){
     Route::get('/curso-deletar/{id}',  [ CursoController::class, 'destroy' ])
     ->middleware('permission:curso_deletar')
     ->name('curso.deletar');
+
+    // Alunos
+    Route::get('/aluno-listagem', [ AlunoController::class, 'index' ])
+    ->middleware('permission:aluno_listar')
+    ->name('aluno.listagem');
+
+    Route::get('/aluno-cadastro', [ CursoController::class, 'create' ])
+    ->middleware('permission:aluno_cadastrar')
+    ->name('aluno.cadastro');
+
+    Route::post('/aluno-salvar',  [ AlunoController::class, 'store' ])
+    ->middleware('permission:aluno_cadastrar')
+    ->name('aluno.salvar');
+
+    Route::get('/aluno-alterar/{id}',  [ AlunoController::class, 'edit' ])
+    ->middleware('permission:aluno_alterar')
+    ->name('aluno.alterar');
+
+    Route::put('/aluno-atualizar/{id}',  [ AlunoController::class, 'update' ])
+    ->middleware('permission:aluno_alterar')
+    ->name('aluno.atualizar');
+
+    Route::get('/aluno-deletar/{id}',  [ AlunoController::class, 'destroy' ])
+    ->middleware('permission:aluno_deletar')
+    ->name('aluno.deletar');
+
 
 });
 
