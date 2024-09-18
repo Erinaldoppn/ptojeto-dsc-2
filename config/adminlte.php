@@ -298,6 +298,12 @@ return [
         [
             'text' => 'Cursos',
             'url' => '/curso-listagem',
+            'icon' => 'fas fa-book',
+        ],
+        
+        [
+            'text' => 'Alunos',
+            'url' => '/aluno-listagem',
             'icon' => 'fas fa-fw fa-user',
         ],
         [

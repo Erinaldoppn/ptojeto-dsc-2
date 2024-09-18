@@ -55,7 +55,7 @@ class AlunoController extends Controller
      */
     public function edit(string $id)
     {
-        $dado = Curso::find($id);
+        $dado = Aluno::find($id);
 
         if($dado){
             return view('aluno-alterar', 
@@ -69,10 +69,10 @@ class AlunoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(AlunoRequest $request, string $id)
     {
         $dados_formulario = $request->validated();
-        $registro_recuperado = Curso::find($id);
+        $registro_recuperado = Aluno::find($id);
 
         if($registro_recuperado){
             $registro_recuperado->update($dados_formulario);
@@ -88,7 +88,7 @@ class AlunoController extends Controller
      */
     public function destroy(string $id)
     {
-        $registro_recuperado = Curso::find($id);
+        $registro_recuperado = Aluno::find($id);
 
         if($registro_recuperado){
             $registro_recuperado->delete();

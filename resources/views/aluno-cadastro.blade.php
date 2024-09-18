@@ -5,9 +5,8 @@
 @section('content_header')
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Cursos</a></li>
             <li class="breadcrumb-item"><a href="#">Alunos</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Novo</li>
+            <li class="breadcrumb-item active" aria-current="page">Novo Cadastro</li>
         </ol>
     </nav>
 @stop

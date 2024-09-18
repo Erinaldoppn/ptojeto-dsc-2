@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('alunos', function (Blueprint $table) {
-            $table->id();
-            $table->string('nome');
-            $table->string('email')->unique();
-            $table->string('telefone');
-            $table->timestamps();
+        Schema::table('alunos', function (Blueprint $table) {
+            $table->dropColumn('curso_id');
         });
     }
 
@@ -25,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('alunos');
+        Schema::table('alunos', function (Blueprint $table) {
+            $table->unsignedBigInteger('curso_id')->nullable(); // Adapte conforme necessário
+        });
     }
 };
