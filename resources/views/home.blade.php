@@ -3,11 +3,15 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Home</h1>
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <p>Seja bem vindo!!.</p>
+@stop
+
+@section('footer')
+    <p>&copy; Desenvolvido by ENCDev 2024.</p>
 @stop
 
 @section('css')

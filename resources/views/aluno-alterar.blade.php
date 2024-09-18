@@ -26,3 +26,7 @@
 @section('js')
     <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
 @stop
+
+@section('footer')
+    <p>&copy; Desenvolvido by ENCDev 2024.</p>
+@stop

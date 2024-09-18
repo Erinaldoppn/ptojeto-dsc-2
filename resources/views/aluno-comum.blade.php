@@ -54,3 +54,7 @@
     <a href="{{route('aluno.listagem')}}" class="btn btn-outline-secondary"><i class="fas fa-list"></i> Listagem</a>
   </div>
 </div>
+
+@section('footer')
+    <p>&copy; Desenvolvido by ENCDev 2024.</p>
+@stop
