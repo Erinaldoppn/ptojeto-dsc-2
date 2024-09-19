@@ -11,7 +11,7 @@
         <div class="alert alert-info text-center">
             <h2>Bem-vindo ao Sistema de Gerenciamento de Alunos e Cursos!</h2>
             <p>Estamos felizes em tê-lo aqui. Este sistema foi desenvolvido para facilitar o gerenciamento de informações relacionadas a alunos e cursos, proporcionando uma experiência simples e eficiente para todos os usuários. Explore as funcionalidades disponíveis e, se precisar de ajuda, nossa equipe estará à disposição para auxiliar. Esperamos que tenha uma excelente experiência utilizando o sistema!</p>
-            <strong>Obrigado por confiar em nós. Seja bem-vindo!</strong>
+            <strong>Seja bem-vindo!</strong>
         </div>
     </div>
 @stop
